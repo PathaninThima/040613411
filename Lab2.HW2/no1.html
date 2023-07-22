@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+        <fieldset>
+            <legend>ข้อ1</legend>
+            <label>ชื่อสาขาวิชา:</label><br>
+            <input
+                type="text"
+                pattern="([A-Za-z0-9ก-๏\s]+)">
+            
+            <p><label>ชื่อย่อสาขาวิชา:</label><br>
+            <input
+                type="text"
+                pattern="[A-Za-z]{10}">
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ2</legend>
+            <label>จำนวนเงินที่จะโอน:</label><br>
+            <input
+                type="text"
+                pattern="(\d\,)+"> ฿
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ3</legend>
+            <label>อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบ:</label><br>
+            <small><i>เรียงจากมากไปน้อย</i></small><p>
+            <input
+                type="text"
+                pattern="[A-Za-zก-๏]+"><p>
+            <input
+                type="text"
+                pattern="[A-Za-zก-๏]+"><p>
+            <input
+                type="text"
+                pattern="[A-Za-zก-๏]+"><p>
+            <input
+                type="text"
+                pattern="[A-Za-zก-๏]+"><p>
+            <input
+                type="text"
+                pattern="[A-Za-zก-๏]+">
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ4</legend>
+            <label>ค่าไฟ 3 เดือนที่ผ่านมา:</label><p>
+            <label>เดือนที่1:</label><br>
+            <input
+                type="text"
+                pattern="[0-9\,]+"> ฿
+            
+            <p><label>เดือนที่2:</label><br>
+            <input
+                type="text"
+                pattern="[0-9\,]+"> ฿
+            <p><label>เดือนที่3:</label><br>
+                <input
+                    type="text"
+                    pattern="[0-9\,]+"> ฿
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ5</legend>
+            <label>รหัสบัตรประชาชน:</label><br>
+            <input
+                type="text"
+                pattern="(\d{1}\-?\d{4}\-?\d{5}\-?\d{2}\-?\d{1})">
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ6</legend>
+            <label>ความพึงพอใจ:</label><br>
+            <small><i>ของหนังสือเล่มนี้</i></small><p>
+            <input
+                type="radio"
+                name="drone">
+                <label >พอใจมาก</label><p>
+            <input
+                type="radio"
+                name="drone">
+                <label >พอใจ</label><p>
+            <input
+                type="radio"
+                name="drone">
+                <label >ปานกลาง</label><p>
+            <input
+                type="radio"
+                name="drone">
+                <label >ไม่พอใจ</label><p>
+            <input
+                type="radio"
+                name="drone">
+                <label >ไม่พอใจมาก</label>
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ7</legend>
+            <label>อาการป่วย:</label><br>
+            <textarea 
+                name="address" 
+                id="address" 
+                cols="35" 
+                rows="4"></textarea>
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ8</legend>
+            <label>ในช่วง 3 เดือนที่ผ่านมา ได้รับวัคซีนหรือไม่:</label><p>
+            <input
+                type="radio"
+                name="drone">
+                <label >ได้รับ</label><p>
+            <input
+                type="radio"
+                name="drone">
+                <label >ไม่ได้รับ</label><p>
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ9</legend>
+            <label>Password:</label>
+            <input
+                type="password"
+                pattern="[A-Za-z0-9ก-๏_-.]+"
+                minlength="8">
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ10</legend>
+            <label>เวลาเข้าเรียน:</label><br>
+            <input
+                type="time"><p>
+            <label>เวลาสิ้นสุดการเรียน:</label><br>
+            <input
+                type="time">
+        </fieldset><br>
+        <fieldset>
+            <legend>ข้อ11</legend>
+            <label>วันและเวลาที่ต้องไปพบแพทย์:</label><p>
+            <input
+                type="datetime-local"><p>
+        </fieldset><br>
+        <input type="submit" value="จอง">
+    </form>
+</body>
+</html>
