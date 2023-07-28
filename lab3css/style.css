@@ -1,0 +1,23 @@
+body{
+    font-weight: bold;
+}
+.yellow-bg{
+    background-color: #FFC107;
+}
+.gray-bg{
+    background-color: #808080;
+}
+b.yellow-bg{
+    text-decoration: underline;
+}
+span.gray-bg{
+    text-decoration: underline;
+}
+span#year{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+tr:hover{
+    background-color: #00ffff;
+}
