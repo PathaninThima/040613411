@@ -25,28 +25,37 @@
         }
     </script> -->
     <script>
-        async function find(){
+        function find() {
             const keyword = document.getElementById("keyword");
             const result = document.getElementById("result");
-            if(keyword.value.length == 0){
-                result.innerHTML = ''; 
+    
+            if (keyword.value.length === 0) {
+                result.innerHTML = '';
                 return;
             }
-            const respond  = await fetch(`workshop2.php?keyword=${keyword.value}`);
-            const array = JSON.parse(await respond.text());
-            result.innerHTML = ''; 
-            for(const arr of array){
-                result.innerHTML +=`
-                <div>
-                    <div><img src="./img/${arr.img}.jpg"></div>
-                    รายชื่อสมาชิก : ${arr.name}
-                    <hr>
-                </div>
-            `;
-            }
-       
+    
+            fetch(`workshop2.php?keyword=${keyword.value}`)
+                .then(response => response.text())
+                .then(data => {
+                    const array = JSON.parse(data);
+                    result.innerHTML = '';
+    
+                    for (const arr of array) {
+                        result.innerHTML += `
+                            <div>
+                                <div><img src="./img/${arr.img}.jpg"></div>
+                                รายชื่อสมาชิก : ${arr.name}
+                                <hr>
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    console.error("เกิดข้อผิดพลาดในการดึงข้อมูล:", error);
+                });
         }
     </script>
+    
 
 </head>
 <body>
